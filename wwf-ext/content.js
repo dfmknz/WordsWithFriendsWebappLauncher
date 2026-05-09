@@ -1,12 +1,11 @@
-const waitFor = (cb) => {
-  if (!cb()) setTimeout(() => waitFor(cb), 100);
+const waitFor = (selector, cb) => {
+  const el = document.querySelector(selector);
+  if (el) return cb(el);
+  setTimeout(() => waitFor(selector, cb), 100);
 };
 
-waitFor(() => {
-  for (const el of document.querySelectorAll('div')) {
-    if (el.textContent.trim() === 'Play Now') {
-      (el.closest('button, a') || el).click();
-      return true;
-    }
-  }
+console.log('wwf-ext loaded');
+waitFor('button.play-now-btn', btn => {
+  console.log('found button, clicking');
+  btn.click();
 });
