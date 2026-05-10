@@ -3,3 +3,5 @@ Exec=omarchy-launch-webapp https://wordswithfriends.com/ --load-extension=/home/
 will load the script on launch
 
 There is also a way to launch it with keybindings
+
+If all this fails, you can always install the extention via chrome://extensions
