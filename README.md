@@ -4,4 +4,4 @@ will load the script on launch
 
 There is also a way to launch it with keybindings
 
-If all this fails, you can always install the extention via chrome://extensions
+If all this fails, you can always install the extension via chrome://extensions
